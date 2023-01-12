@@ -1,3 +1,5 @@
+
+
 #Cheap-Gas {
     display: flex;
     justify-content: center;
@@ -34,7 +36,6 @@ select {
 }
 
 
-
 #clear-btn {
     position: relative;
     left: 720px;
@@ -62,4 +63,14 @@ img {
     position: relative;
     left: 1045px;
     top: -490px;
+}
+
+@media only screen and  (max-width:730px){
+
+}
+
+
+@media only screen and (max-width: 1400px){
+
+    
 }
