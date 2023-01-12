@@ -1,38 +1,68 @@
 // Variable declarations 
 let gasLocation="";
+let fuelType=""
 let searchCity=$("#search-input");
+let fuelTypeDropDown=$("#fuel-type");
 let findBtn ="#find-btn";
 let clearBtn ="#clear-btn";
 let api_key="d4c55c5b1bf40ea6c2ebcaa60f85788f284f9f0432216ca9f70fec6b75ebdcc4";
-const queryURL = "http://serpapi.com/search.json?engine=yahoo&p="; + gasLocation + "&api_key=" + api_key;
 
 
-function getGasList(event) {
+// Function that grabs data from input field 
+
+ function getGasList(event) {
   event.preventDefault();
-  if(searchCity.val().trim!=="") {
+
+  if(searchCity.val().trim()!=="") {
     gasLocation=searchCity.val().trim();
-    currentGasList(gasLocation);
-    console.log("Searching gas prices and locations..");
-
   }
-}
-// Function API call and get search City, St or zip Code results and save to local.Storage
-function currentGasList(gasLocation) {
-  const queryURL="http://serpapi.com/search.json?engine=yahoo&p=" + gasLocation + api_key;
-  $.ajax({
-    url: queryURL,
-    method: "GET",
-  })
-}
+  console.log(fuelTypeDropDown.val());
 
-// Function to parse the results from the search
+  if(fuelTypeDropDown.val()!=="") {
+    fuelType = fuelTypeDropDown.val();
+  }
+
+  if(gasLocation && fuelType) {
+    currentGasList(gasLocation)
+  } else {
+    // todo: tell user to fill out the input field or search box
+  }
+
+ }
+
+// Function API call and get fuel type + search City, St or zip Code 
+
+// https://serpapi.com/search.json?engine=yahoo&p=cheapest%20gas%20prices%20%20+plano,Tx&api_key=d4c55c5b1bf40ea6c2ebcaa60f85788f284f9f0432216ca9f70fec6b75ebdcc4
+// queryURL todo: fix the fueltype field
+function currentGasList(gasLocation, fuelType) {
+  const queryURL="https://serpapi.com/search.json?engine=yahoo&p=cheapest+gas+prices+" +gasLocation+"&api_key=" + api_key;
+  console.log(queryURL);
+  // fetch(queryURL)
+ 	//   .then(response => response.json())
+ 	//   .then(responseJson => console.log(responseJson))
+}
+//  Function to parse the results from the search
 
 // Function API call to get map locations from previous location requests
+// const loader = new Loader({
+//   apiKey: "AIzaSyA0wYvn_X98OtdnjFkVOJfHO857jDfeR9E",
+//   version: "weekly",
+//   ...additionalOptions,
+// });
+
+// loader.load().then(() => {
+//   map = new google.maps.Map(document.getElementById("map"), {
+//     center: { lat: -34.397, lng: 150.644 },
+//     zoom: 8,
+//   });
+// });
+
 
 // //  Click button to call the function above   
  $('#find-btn').click(function(event) {  
     event.preventDefault();
     console.log("Searching...", searchCity);
+    getGasList(event);
  });  
 
 //  Click button to clear the initial search
