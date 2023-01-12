@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -13,12 +13,12 @@
 </head>
 <body class="h-14 bg-gradient-to-r from-sky-500 to-indigo-500" >
 
-</section>
-<h1 id ="Cheap-Gas" class="flex items-center text-5xl font-extrabold dark:text-white">Cheap Gas<span class="bg-blue-100 text-blue-800 text-2xl font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-300 dark:text-indigo-800 ml-2">Prices</span></h1>
-
+<section>
+<h1 id ="Cheap-Gas"  class="flex items-center text-5xl font-extrabold dark:text-white">Cheap Gas<span class="bg-blue-100 text-blue-800 text-2xl font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-300 dark:text-indigo-800 ml-2">Prices</span></h1>
+<box-icon class="box-icon" type="solid" name="gas-pump"></box-icon>
 <h2 id ="Find-Gas" class="my-4 text-lg text-gray-500">Find Gas Stations by:</h2>
 
-<select name="type" class="select select2 form-control" data-placeholder="Gas Type">
+<select id="dropdown" name="type" class="select select2 form-control" data-placeholder="Gas Type">
 		<option selected hidden>Gas Type</option>
 		<option value="selected">Regular Gas</option>
 		<option value="premium"   >Premium Gas</option>
@@ -31,6 +31,9 @@
 
 </section>
 
+<div id="glass1" class="w-72 h-72 bg-white bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg"></div>
+<div id="glass2" class="w-72 h-72 bg-white bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg"></div>
+<img src= "fuel-station-icon-retro-gas-pump-o0KOqn5-600.jpg" class="w-70 h-60 bg-white bg-opacity-25 backdrop-blur-xl rounded-3xl drop-shadow-1xl">
 
 
 
@@ -39,6 +42,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="./assets/Javascript/script.js"></script>
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
 
 </html>
