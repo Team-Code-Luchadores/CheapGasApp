@@ -30,14 +30,60 @@
 <button id="clear-btn">Clear</button>
 
 </section>
+<h1>Gas Station Results</h1>
+<style>
+	#map{
+		height:400px;
+		width:100%;
+	}
+</style>
+<!-- Map Function -->
+<div id="map"></div>
+<script>
+	function initMap() {
+		// map options
+		var options = {
+			zoom:8,
+			// This lat/lon should reflect the location entered
+			center: {lat:33.0198,lng:-96.6989}
+		}
+		// New map
+		var map = new 
+		google.maps.Map(document.getElementById('map'), options);
+
+		// Add lat/lon markers for chosen gas station
+		var marker = new 
+		google.maps.Marker({
+			// This lat/lon should reflect the results of the gas station
+			position:{lat:33.101446,lng:-96.676756},
+			map:map		
+		})
+		// // Coords from GET request for top 5 gas stations
+		// addMarker({coords:{lat:33.101,lng:-96.}});
+		// addMarker(marker);
+		// addMarker(marker);
+		// addMarker(marker);
+		// addMarker(marker);
+		// // add dynamic marker function to pull lat/lon
+		// function addMarker(coords){
+		// 	var marker = new 
+		// google.maps.Marker({
+		// 	// This lat/lon should reflect the results of the gas station
+		// 	position:coords,
+		// 	map:map		
+		// })
+		// }
+	}	
 
 
-
-
+</script>
 </body>
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="./assets/JS/script.js"></script>
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0wYvn_X98OtdnjFkVOJfHO857jDfeR9E&callback=initMap">
+</script>
 
 </html>

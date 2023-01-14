@@ -10,7 +10,7 @@ let api_key="d4c55c5b1bf40ea6c2ebcaa60f85788f284f9f0432216ca9f70fec6b75ebdcc4";
 
 // Function that grabs data from input field 
 
- function getGasList(event) {
+ function getGasList(event) { 
   event.preventDefault();
 
   if(searchCity.val().trim()!=="") {
@@ -30,16 +30,18 @@ let api_key="d4c55c5b1bf40ea6c2ebcaa60f85788f284f9f0432216ca9f70fec6b75ebdcc4";
 
  }
 
-// Function API call and get fuel type + search City, St or zip Code 
-
 // https://serpapi.com/search.json?engine=yahoo&p=cheapest%20gas%20prices%20%20+plano,Tx&api_key=d4c55c5b1bf40ea6c2ebcaa60f85788f284f9f0432216ca9f70fec6b75ebdcc4
 // queryURL todo: fix the fueltype field
 function currentGasList(gasLocation, fuelType) {
-  const queryURL="https://serpapi.com/search.json?engine=yahoo&p=cheapest+gas+prices+" +gasLocation+"&api_key=" + api_key;
+  const queryURL="https://serpapi.com/search.json?engine=yahoo&p=cheapest+gas+prices+" +gasLocation+"&api_key="+ api_key;
   console.log(queryURL);
-  // fetch(queryURL)
- 	//   .then(response => response.json())
- 	//   .then(responseJson => console.log(responseJson))
+    // fetch(queryURL) .then((data)=> {
+    //   return data.json();
+    // }).then((completedata)=> {
+    //   console.log(completedata)
+    //   // document.getElementById().
+    //   // innerHTML=completedata;
+    // });
 }
 //  Function to parse the results from the search
 
@@ -63,6 +65,7 @@ function currentGasList(gasLocation, fuelType) {
     event.preventDefault();
     console.log("Searching...", searchCity);
     getGasList(event);
+    currentGasList(event);
  });  
 
 //  Click button to clear the initial search
