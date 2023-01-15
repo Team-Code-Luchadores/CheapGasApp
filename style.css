@@ -35,6 +35,10 @@ select {
 
 }
 
+#map {
+    height:700px;
+    width:65%;
+    }
 
 #clear-btn {
     position: relative;
