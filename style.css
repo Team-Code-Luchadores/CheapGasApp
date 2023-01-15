@@ -8,4 +8,7 @@
     justify-content: center;
 }
 
-
+#map {
+    height:700px;
+    width:65%;
+    }
