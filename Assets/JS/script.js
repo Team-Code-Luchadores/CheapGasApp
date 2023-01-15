@@ -7,73 +7,74 @@ let findBtn ="#find-btn";
 let clearBtn ="#clear-btn";
 let api_key="d4c55c5b1bf40ea6c2ebcaa60f85788f284f9f0432216ca9f70fec6b75ebdcc4";
 
-
 // Function that grabs data from input field 
 
- function getGasList(event) { 
-  event.preventDefault();
+  function getGasList(event) { 
+   event.preventDefault();
 
-  if(searchCity.val().trim()!=="") {
-    gasLocation=searchCity.val().trim();
+   if(searchCity.val().trim()!=="") {
+     gasLocation=searchCity.val().trim();
+   }
+    console.log(fuelTypeDropDown.val());
+
+    if(fuelTypeDropDown.val()!=="") {
+      fuelType = fuelTypeDropDown.val();
+    }
+
+   if(gasLocation && fuelType) {
+     currentGasList(gasLocation)
+   } else {
+     // todo: tell user to fill out the input field or search box
+   }
+
   }
-  console.log(fuelTypeDropDown.val());
-
-  if(fuelTypeDropDown.val()!=="") {
-    fuelType = fuelTypeDropDown.val();
-  }
-
-  if(gasLocation && fuelType) {
-    currentGasList(gasLocation)
-  } else {
-    // todo: tell user to fill out the input field or search box
-  }
-
- }
 
 // https://serpapi.com/search.json?engine=yahoo&p=cheapest%20gas%20prices%20%20+plano,Tx&api_key=d4c55c5b1bf40ea6c2ebcaa60f85788f284f9f0432216ca9f70fec6b75ebdcc4
 // queryURL todo: fix the fueltype field
-function currentGasList(gasLocation, fuelType) {
-  const queryURL="https://serpapi.com/search.json?engine=yahoo&p=cheapest+gas+prices+" +gasLocation+"&api_key="+ api_key;
-  console.log(queryURL);
-    // fetch(queryURL) .then((data)=> {
-    //   return data.json();
-    // }).then((completedata)=> {
-    //   console.log(completedata)
-    //   // document.getElementById().
-    //   // innerHTML=completedata;
-    // });
+   function currentGasList(gasLocation) {
+    const queryURL="https://serpapi.com/search.json?engine=yahoo&p=cheapest+gas+prices+" +gasLocation+"&api_key="+ api_key;
+    console.log(queryURL);
+
+//  Function to call the yahoo API
+  fetch(queryURL) 
+    .then(response => response.json())
+    .then(data => {
+      const prices = data.items.map(item => item.pagemap.offer[0].price);
+      const cheapestPrice = Math.min(...prices);
+      console.log(`The cheapest gas price in ${location} is ${cheapestPrice}`);
+    })
+  //  .catch(error => console.error(`Error getting gas prices: ${error}`));
 }
-//  Function to parse the results from the search
 
-// Function API call to get map locations from previous location requests
-// const loader = new Loader({
-//   apiKey: "AIzaSyA0wYvn_X98OtdnjFkVOJfHO857jDfeR9E",
-//   version: "weekly",
-//   ...additionalOptions,
-// });
 
-// loader.load().then(() => {
-//   map = new google.maps.Map(document.getElementById("map"), {
-//     center: { lat: -34.397, lng: 150.644 },
-//     zoom: 8,
-//   });
-// });
+
+
+// Function to make googlemaps api call for gas station selected   
+// function initMap() {
+//   // map options
+//   var options = {
+//       center: {lat:33.0198, lng:-96.6989},
+//       zoom:8    
+//   }
+//   // new map
+//   map = new google.maps.Map(document.getElementById('map'),options) 
+
+//   }
 
 
 // //  Click button to call the function above   
- $('#find-btn').click(function(event) {  
+$('#find-btn').click(function(event) {  
     event.preventDefault();
-    console.log("Searching...", searchCity);
-    getGasList(event);
     currentGasList(event);
+    console.log(searchCity);
  });  
 
 //  Click button to clear the initial search
- $('#clear-btn').click(function(event) { 
+$('#clear-btn').click(function(event) { 
    event.preventDefault();
    console.log("Clearing...");
  });
 
 //  Click Handlers PLACEHOLDER
-// $("#find-btn").on("click", getGasList);
-// $("#clear-btn").on("click", clearSearch);
+// $("#find-btn").on("click", getGasList)
+// $("#clear-btn").on("click", clearSearch)
