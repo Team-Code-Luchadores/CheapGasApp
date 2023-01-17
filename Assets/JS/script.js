@@ -56,16 +56,16 @@ let api_key="d4c55c5b1bf40ea6c2ebcaa60f85788f284f9f0432216ca9f70fec6b75ebdcc4";
 //} 
 
 // Function to make googlemaps api call for gas station selected   
- // function initMap() {
+  function initMap() {
     //map options
-  // var options = {
- //      center: {lat:33.0198, lng:-96.6989},
- //      zoom:8    
-  // }
+  var options = {
+  center: {lat:33.0198, lng:-96.6989},
+  zoom:8    
+   }
     //new map
- //  map = new google.maps.Map(document.getElementById('map'),options) 
+   map = new google.maps.Map(document.getElementById('map'),options) 
 
- // }
+  }
 
 
 // //  Click button to call the function above   
@@ -84,3 +84,31 @@ $('#clear-btn').click(function(event) {
 //  Click Handlers PLACEHOLDER
 // $("#find-btn").on("click", getGasList)
 // $("#clear-btn").on("click", clearSearch)
+
+//Module Code
+
+const modal = document.querySelector('#my-modal');
+const modalBtn = document.querySelector('#modal-btn');
+const closeBtn = document.querySelector('.close');
+
+// Events
+modalBtn.addEventListener('click', openModal);
+closeBtn.addEventListener('click', closeModal);
+window.addEventListener('click', outsideClick);
+
+// Open
+function openModal() {
+  modal.style.display = 'block';
+}
+
+// Close
+function closeModal() {
+  modal.style.display = 'none';
+}
+
+// Close If Outside Click
+function outsideClick(e) {
+  if (e.target == modal) {
+    modal.style.display = 'none';
+  }
+}
