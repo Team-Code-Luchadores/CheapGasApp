@@ -56,15 +56,27 @@
 			class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded-full"
 			id="clear-btn">Clear
 		</button>
+		<!--Modal button
+		-->
+		
+		<button id="modal-btn" class="button bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded-full   ">Quickstart Instuctions</button>
 
+		<div id="my-modal" class="modal">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <span class="close">&times;</span>
+			  <h2>Instructions</h2>
+			</div>
+			<div class="modal-body">
+			  <p>This website was develop by a team to find the cheapest prices in your area. Type in your zipcode and the gas type to find you results!</p>
+			</div>
+		  </div>
+		</div>
+		
 	</section>
 
-	<div id="glass1" class="w-72 h-72 bg-white bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg"></div>
-	<div id="glass2" class="w-72 h-72 bg-white bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg"></div>
-	<img src="fuel-station-icon-retro-gas-pump-o0KOqn5-600.jpg"
-		class="w-70 h-60 bg-white bg-opacity-25 backdrop-blur-xl rounded-3xl drop-shadow-1xl">
 
-<h1>Map of Location Selected</h1>
+<h1 id="map-title" class=" text-2xl text-zinc-50">Map of Location Selected</h1>
 <!-- Placeholder for googlemaps output --> 
 <div id="map"></div>
 
