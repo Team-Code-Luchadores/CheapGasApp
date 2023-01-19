@@ -35,10 +35,6 @@ select {
 
 }
 
-#map {
-    height:700px;
-    width:65%;
-    }
 
 #clear-btn {
     position: relative;
@@ -76,5 +72,4 @@ img {
 
 @media only screen and (max-width: 1400px){
 
-    
 }
