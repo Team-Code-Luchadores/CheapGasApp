@@ -6,7 +6,18 @@ let fuelTypeDropDown=$("#fuel-type");
 let findBtn ="#find-btn";
 let clearBtn ="#clear-btn";
 let api_key="d4c55c5b1bf40ea6c2ebcaa60f85788f284f9f0432216ca9f70fec6b75ebdcc4";
+
 const queryURL="https://serpapi.com/search.json?engine=yahoo&p=cheapest+gas+prices+"
+
+
+
+//const queryURL="https://serpapi.com/search.json?engine=yahoo&p=cheapest+gas+prices+"+gasLocation+"&tbm=lcl&api_key="+ api_key;
+
+
+let results=document.getElementById('results');
+
+// Function that grabs data from input field 
+
 
 
 // Function that grabs data from input field 
@@ -54,7 +65,7 @@ const queryURL="https://serpapi.com/search.json?engine=yahoo&p=cheapest+gas+pric
     function clearFields() {
       searchCity.value = ""
     }
-                            
+
 // //  Click button to call the function above   
 $('#find-btn').click(function(event) {  
     event.preventDefault();
@@ -72,6 +83,7 @@ $('#clear-btn').click(function(event) {
 //  Click Handlers PLACEHOLDER
 // $("#find-btn").on("click", getGasList)
 // $("#clear-btn").on("click", clearSearch)
+
 
 //Module Code
 
@@ -99,4 +111,10 @@ function outsideClick(e) {
   if (e.target == modal) {
     modal.style.display = 'none';
   }
+
 }
+
+}
+
+  
+
