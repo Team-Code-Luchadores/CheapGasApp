@@ -10,7 +10,7 @@
 
 #Find-Gas {
     position: relative;
-    left: 680px;
+    left: 730px;
     
 }
 
@@ -59,7 +59,7 @@ select {
 
   #modal-btn {
     position: relative;
-    left: -80px;
+    left: 100px;
     top: 15px;
   }
   
@@ -145,20 +145,41 @@ select {
 
 #map-title{
   position: relative;
-  left: 800px;
+  left: 750px;
   top: 80px;
 }
 
-
-@media only screen and (max-width: 1400px){
-
-
 #map {
-    position: relative;
-    top: 100px;
-    left: 420px;
-    height:400px;
-    width:50%;
+  position: relative;
+  top: 100px;
+  left: 200px;
+  height:500px;
+  width:50%;
+  text-shadow: #000;
+
+}
+
+
+img {
+  position: relative;
+  top: 100px;
+  left: 425px;
+  height:1000px;
+  width:60%;
+
+}
+
+#gasStations 
+{
+  position: relative;
+  top: 1100px;
+  left: 200px;
+  z-index: -2;
+  color: whitesmoke;
+  text-shadow: #000;
+  font-size: 18px;
+  font-weight: bolder;
+  
 
 }
 
@@ -187,7 +208,6 @@ select {
     width: 100%;
     
   }
-
-
-
 }
+
+

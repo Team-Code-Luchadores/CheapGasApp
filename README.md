@@ -13,13 +13,13 @@ AS a consumer, I WANT to find the cheapest gas in my area and the fastest way to
 ## Installation
 1. HTML and CSS used Tailwind CSS to structure as well as font and colors.
 2. Buttons were added, one of which includes a Find, Clear and  a Quickstart Guide (modules)
-3. Yahoo SerpAPI and Google Maps API were used to generate gas stations and the fastest route to get there.
+3. Yahoo Serp API was used to generate gas stations and the fastest route to get there.
 
 ## Screenshot
 
 The following image shows the web application's appearance and functionality:
 
-![screenshot-of-website-image](./Screenshot%202023-01-18%20at%208.33.42%20PM.png)
+![screenshot-of-website-image](./Screenshot%202023-01-18%20at%2010.52.32%20PM.png)
 
 
 ## Usage
