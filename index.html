@@ -16,7 +16,7 @@
 <body>
 	<style>
 		body {
-			background-image: url('./david-griffiths-Z3cBD6YZhOg-unsplash.jpg');
+			background-image: url('./watercolor-background-grey-watercolour-painting-textured-design-white-paper-background_7190-3250.webp');
 			background-repeat: no-repeat;
 			background-attachment: fixed;
 			background-size: cover;
@@ -24,28 +24,16 @@
 		}
 	</style>
 
-</section>
-<h1>Gas Station Results</h1>
-<!-- Placeholder for gas station list from API -->
-<div id="gasStations"></div>
-	<section>
+
 		<h1 id="Cheap-Gas" class="flex items-center text-8xl font-extrabold dark:text-white">Cheap Gas<span
 				class="bg-blue-100 text-blue-800 text-2xl font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-white-300 dark:text-indigo-800 ml-2">Prices</span>
 		</h1>
 		
 
 		</box-icon>
-		<h2 id="Find-Gas" class=" text-2xl text-zinc-50">Find Gas Stations by:
+		<h2 id="Find-Gas" class=" text-2xl text-zinc-50">Find Gas Stations by:</h2>
 
-		</h2>
 
-		<select id="dropdown" name="type" class="select select2 form-control" data-placeholder="Gas Type">
-			<option selected hidden>Gas Type</option>
-			<option value="selected">Regular Gas</option>
-			<option value="premium">Premium Gas</option>
-			<option value="mid-grade">Mid-Grade Gas</option>
-			<option value="diesel">Diesel</option>
-		</select>
 		<input id="search-input" class="form-control input-lg location" type="text" name="location"
 			data-placeholder="City, State or Zip" placeholder="Zip Code" value=""/>
 		<button
@@ -59,23 +47,44 @@
 
 	</section>
 
-	<div id="glass1" class="w-72 h-72 bg-white bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg"></div>
-	<div id="glass2" class="w-72 h-72 bg-white bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg"></div>
-	<img src="fuel-station-icon-retro-gas-pump-o0KOqn5-600.jpg"
-		class="w-70 h-60 bg-white bg-opacity-25 backdrop-blur-xl rounded-3xl drop-shadow-1xl">
+</section>
+<!-- Placeholder for gas station list from API -->
+<ul id="gasStations">
+	<!-- Data from yahoo search array will go here as a list -->
 
-<h1>Map of Location Selected</h1>
+</ul>
+</div>
+
+<section>
+
+	
+
+
 <!-- Placeholder for googlemaps output --> 
 <div id="map"></div>
+
+<!-- Geolocation added to give starting point for directions to the chose gas station -->
+<!-- User will be prompted to "allow" for known location -->
+<script>
+	if ('geolocation' in navigator) {
+		console.log('geolocation available');
+		navigator.geolocation.getCurrentPosition(position => {
+			console.log(position);
+		});
+	} else {
+		console.log('geolocation not available');
+	}
+</script
 
 </body>
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="./assets/JS/script.js"></script>
--- <script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0wYvn_X98OtdnjFkVOJfHO857jDfeR9E&callback=initMap">
-</script> -->
+ <!-- <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0wYvn_X98OtdnjFkVOJfHO857jDfeR9E&callback=setMap">
+</script>   -->
 
+<footer>
 
-
+</footer>
 </html>
