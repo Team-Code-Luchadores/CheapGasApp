@@ -16,20 +16,20 @@
 
 select {
     position: relative;
-    left: 660px;
+    left: 680px;
     top: 1rem;
 }
 
 #search-input {
     position: relative;
-    left: 680px;
+    left: 730px;
     top: 1rem;
 
 }
 
 #find-btn {
     position: relative;
-    left: 700px;
+    left: 760px;
     top: 1rem;
 
 
@@ -38,38 +38,124 @@ select {
 
 #clear-btn {
     position: relative;
-    left: 720px;
+    left: 780px;
     top: 1rem;
 
 }
+/* Modal Code
+Todo: adjust CSS */
 
+:root {
+    --modal-duration: 1s;
+    --modal-color: #428bca;
+  }
+  
+  body {
+    
+    background: #f4f4f4;
+    font-size: 17px;
+   
+  }
+
+  #modal-btn {
+    position: relative;
+    left: -80px;
+    top: 15px;
+  }
+  
+  .button {
+    
+    padding: 1em 2em;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .modal {
+    display: none;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    margin: 10% auto;
+    width: 60%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+  }
+  
+  .modal-header h2
+   {
+    margin: 0;
+  }
+  
+  .modal-header {
+    background: var(--modal-color);
+    padding: 15px;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  .modal-body {
+    padding: 10px 20px;
+    background: #fff;
+  }
+    
+  .close {
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+    color: #fff;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  @keyframes modalopen {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+*/
 #glass1 {
-    position: relative;
-    left: 620px;
-    top: 4rem;
-    border-radius: 20%;
+  position: relative;
+  left: 620px;
+  top: 4rem;
+  border-radius: 20%;
+  
 
 }
 
-#glass2 {
-    position: relative;
-    left: 1020px;
-    top: -14rem;
-    border-radius: 20%;
-
-}
-img {
-    border-radius: 100%;
-    position: relative;
-    left: 1045px;
-    top: -490px;
-}
-
-@media only screen and  (max-width:730px){
-
+#map-title{
+  position: relative;
+  left: 800px;
+  top: 80px;
 }
 
 
 @media only screen and (max-width: 1400px){
+
+
+#map {
+    position: relative;
+    top: 100px;
+    left: 420px;
+    height:600px;
+    width:50%;
 
 }
