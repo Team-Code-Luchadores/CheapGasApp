@@ -10,12 +10,14 @@ let api_key="d4c55c5b1bf40ea6c2ebcaa60f85788f284f9f0432216ca9f70fec6b75ebdcc4";
 const queryURL="https://serpapi.com/search.json?engine=yahoo&p=cheapest+gas+prices+"
 
 
+
 //const queryURL="https://serpapi.com/search.json?engine=yahoo&p=cheapest+gas+prices+"+gasLocation+"&tbm=lcl&api_key="+ api_key;
 
 
 let results=document.getElementById('results');
 
 // Function that grabs data from input field 
+
 
 
 // Function that grabs data from input field 
@@ -41,7 +43,6 @@ let results=document.getElementById('results');
 
       searchCity = document.getElementById("search-input").value;
       const url = queryURL+searchCity+"&tbm=lcl&api_key="+ api_key;
-      console.log(url);
       const response = await fetch(url);
       const data = await response.json();
        genList(data);
@@ -55,17 +56,15 @@ let results=document.getElementById('results');
        let list = document.dataTransfer  
        let listItems = data.local_results.places.map(function(item, key) {
         console.log(data);
-         return `<h1>Gas Stations Results</h1>   <li>  <h3>${item.title}</h3>  <p>${item.price}</p>  <p>${item.address     }</p>  </li>`;
+         return `<li>  <h3>${item.title}</h3>  <p>${item.address}</p>  <p>${item.phone     }</p>  </li>`;
        });
        document.getElementById("gasStations").innerHTML = listItems.join("");
        map.appendChild(mapImage)
      }
     
-
     function clearFields() {
       searchCity.value = ""
     }
-
 
 // //  Click button to call the function above   
 $('#find-btn').click(function(event) {  
@@ -77,14 +76,13 @@ $('#find-btn').click(function(event) {
 //  Click button to clear the initial search
 $('#clear-btn').click(function(event) { 
    event.preventDefault();
+   clearFields(event);
    console.log("Clearing...");
  });
 
 //  Click Handlers PLACEHOLDER
 // $("#find-btn").on("click", getGasList)
 // $("#clear-btn").on("click", clearSearch)
-
-  
 
 
 //Module Code
@@ -113,6 +111,10 @@ function outsideClick(e) {
   if (e.target == modal) {
     modal.style.display = 'none';
   }
+
+}
+
 }
 
   
+
