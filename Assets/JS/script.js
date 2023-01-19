@@ -8,12 +8,10 @@ let clearBtn ="#clear-btn";
 let api_key="d4c55c5b1bf40ea6c2ebcaa60f85788f284f9f0432216ca9f70fec6b75ebdcc4";
 
 const queryURL="https://serpapi.com/search.json?engine=yahoo&p=cheapest+gas+prices+"
-let latLocation ="";
-let lonLocation ="";
 
-const queryURL="https://serpapi.com/search.json?engine=yahoo&p=cheapest+gas+prices+"+gasLocation+"&tbm=lcl&api_key="+ api_key;
-let latLocation ="";
-let lonLocation ="";
+
+//const queryURL="https://serpapi.com/search.json?engine=yahoo&p=cheapest+gas+prices+"+gasLocation+"&tbm=lcl&api_key="+ api_key;
+
 
 let results=document.getElementById('results');
 
@@ -27,12 +25,6 @@ let results=document.getElementById('results');
    if(searchCity!=="") {
      gasLocation=searchCity;
    }
-
-   // console.log(fuelTypeDropDown.val());
-
-   // if(fuelTypeDropDown.val()!=="") {
-   //   fuelType = fuelTypeDropDown.val();
-    //}
 
    if(gasLocation) {
      currentGasList(gasLocation)
@@ -73,70 +65,6 @@ let results=document.getElementById('results');
     function clearFields() {
       searchCity.value = ""
     }
-                            
-
-// Function to make googlemaps api call for gas station selected   
-   function initMap() {
-     //map options
-    var options = {
-          center: {lat:32.67, lng:-96.79} ,
-          zoom:8,    
-      }
-       //new map
-      map = new google.maps.Map(document.getElementById('map'),options) 
-
-     }
-
- //https://serpapi.com/search.json?engine=yahoo&p=cheapest%20gas%20prices+plano,Tx&api_key=d4c55c5b1bf40ea6c2ebcaa60f85788f284f9f0432216ca9f70fec6b75ebdcc4
-// queryURL todo: fix the fueltype field
-   function currentGasList(gasLocation) {
-    const queryURL= 'https://serpapi.com/search.json?engine=yahoo&p=cheapest%20gas%20prices%20&location= +getLocation+ &tbm=lcl &api_key=d4c55c5b1bf40ea6c2ebcaa60f85788f284f9f0432216ca9f70fec6b75ebdcc4'
-    //const queryURL= 'https://serpapi.com/search.json?engine=yahoo&p=cheapest%20gas%20prices%20%20''&location =' +gasLocation '&api_key=' +d4c55c5b1bf40ea6c2ebcaa60f85788f284f9f0432216ca9f70fec6b75ebdcc4'
-   // const queryURL='https://serpapi.com/search.json?engine=yahoo&p=cheapest+gas+prices'&location= +gasLocation+'&api_key='+ api_key;
-   // const queryURL='https://serpapi.com/search.json?q=gas'
-    console.log(queryURL);
-
-//  Function to call the yahoo API
-  fetch(queryURL) 
-    .then(response => response.json())
-    .then(data => {
-     // var related_searches = data.related_searches[0].query
-    // displayGasData(related_searches);
-     // const prices = data.items.map(item => item.pagemap.offer[0].price);
-     // const cheapestPrice = Math.min(...prices);
-      console.log(data);
-    })
-  //  .catch(error => console.log(`Error getting gas prices: ${error}`));
-}
-// Display Gas Station Results
-//function displayGasData (data) {
- // let ptag=document.createElement('p');
- // ptag.textContent=(data);
- // results.appendchild(ptag);
-//}
-
-//   Zip Code Results 
-  async function getData() {
-    var searchCity = document.getElementById("search-input").value;
-    const url = 'https://serpapi.com/search.json?engine=yahoo&p=cheapest%20gas%20prices%20%20'+gasLocation+'&api_key=d4c55c5b1bf40ea6c2ebcaa60f85788f284f9f0432216ca9f70fec6b75ebdcc4';
-    const response = await fetch(url);
-    const data = await response.json();
-    console.log(data);
-} 
-
-// Function to make googlemaps api call for gas station selected   
-  function initMap() {
-    //map options
-
-   var options = {
-       center: {lat:33.0198, lng:-96.6989},
-       zoom:8    
-
-   }
-    //new map
-   map = new google.maps.Map(document.getElementById('map'),options) 
-
-  }
 
 
 // //  Click button to call the function above   
