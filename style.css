@@ -9,8 +9,8 @@
 
 
 #Find-Gas {
-    display: flex;
-    justify-content: center;
+    position: relative;
+    left: 680px;
     
 }
 
@@ -42,7 +42,7 @@ select {
 
 }
 /* Modal Code
-Todo: adjust CSS */
+*/
 
 :root {
     --modal-duration: 1s;
@@ -131,6 +131,8 @@ Todo: adjust CSS */
   }
 
 */
+
+
 #glass1 {
   position: relative;
   left: 620px;
@@ -150,6 +152,35 @@ Todo: adjust CSS */
     position: relative;
     top: 100px;
     left: 420px;
-    height:600px;
+    height:400px;
     width:50%;
+}
+
+@media screen and (min-width: 768px) {
+  section {
+    float: none;
+    width: 100%;
+    
+    
+  }
+  
+}
+
+@media screen and (min-width: 992px) {
+  section {
+    float: none;
+    width: 100%;
+    
+  }
+  
+}
+
+@media screen and (max-width: 992px) {
+  section {
+    float: none;
+    width: 100%;
+    
+  }
+
+
 }

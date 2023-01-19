@@ -75,10 +75,6 @@ let results=document.getElementById('results');
        center: {lat:33.0198, lng:-96.6989},
        zoom:8    
 
-  var options = {
-  center: {lat:33.0198, lng:-96.6989},
-  zoom:8    
-
    }
     //new map
    map = new google.maps.Map(document.getElementById('map'),options) 
@@ -134,3 +130,4 @@ function outsideClick(e) {
   }
 }
 
+  
