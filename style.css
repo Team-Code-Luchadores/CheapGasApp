@@ -35,6 +35,7 @@ select {
 
 }
 
+
 #clear-btn {
     position: relative;
     left: 780px;
@@ -146,10 +147,15 @@ Todo: adjust CSS */
   top: 80px;
 }
 
+
+@media only screen and (max-width: 1400px){
+
+
 #map {
     position: relative;
     top: 100px;
     left: 420px;
     height:600px;
     width:50%;
+
 }
