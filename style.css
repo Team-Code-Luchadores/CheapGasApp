@@ -1,29 +1,13 @@
+
 #Cheap-Gas {
-  display: flex;
-  justify-content: center;
-  margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
 }
 
 
 
 #Find-Gas {
-
-  position: relative;
-  left: 680px;
-  
-}
-
-select {
-  position: relative;
-  left: 680px;
-  top: 1rem;
-}
-
-#search-input {
-  position: relative;
-  left: 730px;
-  top: 1rem;
-=======
     position: relative;
     left: 730px;
     
@@ -40,85 +24,25 @@ select {
     left: 730px;
     top: 1rem;
 
-
 }
 
 #find-btn {
-
-  position: relative;
-  left: 760px;
-  top: 1rem;
-
     position: relative;
     left: 760px;
     top: 1rem;
-
 
 
 }
 
 
 #clear-btn {
-
-  position: relative;
-  left: 780px;
-  top: 1rem;
-
     position: relative;
     left: 780px;
     top: 1rem;
 
-
 }
 /* Modal Code
 */
-
-
-:root {
-  --modal-duration: 1s;
-  --modal-color: #428bca;
-}
-
-body {
-  
-  background: #f4f4f4;
-  font-size: 17px;
- 
-}
-
-#modal-btn {
-  position: relative;
-  left: -80px;
-  top: 15px;
-}
-
-.button {
-  
-  padding: 1em 2em;
-  border: 0;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.modal {
-  display: none;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-  margin: 10% auto;
-  width: 60%;
-  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
-  animation-name: modalopen;
-  animation-duration: var(--modal-duration);
-}
-
 
 :root {
     --modal-duration: 1s;
@@ -206,7 +130,7 @@ body {
     }
   }
 
-
+*/
 
 
 #glass1 {
@@ -216,19 +140,6 @@ body {
   border-radius: 20%;
   
 
-
-.modal-header h2
- {
-  margin: 0;
-}
-
-
-.modal-header {
-  background: var(--modal-color);
-  padding: 15px;
-  color: #fff;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
 }
 
 #map-title{
@@ -245,53 +156,7 @@ body {
   width:50%;
   text-shadow: #000;
 
-
-.modal-body {
-  padding: 10px 20px;
-  background: #fff;
 }
-
-  
-.close {
-  color: #ccc;
-  float: right;
-  font-size: 30px;
-  color: #fff;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-@keyframes modalopen {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-
-
-
-#glass1 {
-position: relative;
-left: 620px;
-top: 4rem;
-border-radius: 20%;
-
-
-}
-
-#map-title{
-position: relative;
-left: 800px;
-top: 80px;
-
 
 
 img {
@@ -316,7 +181,6 @@ img {
   
 
 }
-
 @media screen and (min-width: 768px) {
   section {
     float: none;
@@ -343,49 +207,8 @@ img {
     width: 100%;
     
   }
-}
-
-
-
-
-#map {
-  position: relative;
-  top: 100px;
-  left: 420px;
-  height:400px;
-  width:100%;
-
-}
-
-@media screen and (min-width: 768px) {
-section {
-  float: none;
-  width: 100%;
   
-  
-}
 
-}
-
-@media screen and (min-width: 992px) {
-section {
-  float: none;
-  width: 100%;
-  
-}
-
-}
-
-@media screen and (max-width: 992px) {
-section {
-  float: none;
-  width: 100%;
-  
-}
-
-
-
-}
 ul.a {
   list-style-type: circle;
 }
