@@ -9,16 +9,11 @@ let api_key="d4c55c5b1bf40ea6c2ebcaa60f85788f284f9f0432216ca9f70fec6b75ebdcc4";
 
 const queryURL="https://serpapi.com/search.json?engine=yahoo&p=cheapest+gas+prices+"
 
-
-
 //const queryURL="https://serpapi.com/search.json?engine=yahoo&p=cheapest+gas+prices+"+gasLocation+"&tbm=lcl&api_key="+ api_key;
-
 
 let results=document.getElementById('results');
 
 // Function that grabs data from input field 
-
-
 
 // Function that grabs data from input field 
   function getGasList(event) { 
@@ -83,11 +78,6 @@ $('#clear-btn').click(function(event) {
    console.log("Clearing...");
  });
 
-//  Click Handlers PLACEHOLDER
-// $("#find-btn").on("click", getGasList)
-// $("#clear-btn").on("click", clearSearch)
-
-
 //Module Code
 
 const modal = document.querySelector('#my-modal');
@@ -118,6 +108,3 @@ function outsideClick(e) {
 }
 
 }
-
-  
-
