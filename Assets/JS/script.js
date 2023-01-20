@@ -56,7 +56,10 @@ let results=document.getElementById('results');
        let list = document.dataTransfer  
        let listItems = data.local_results.places.map(function(item, key) {
         console.log(data);
-         return `<li>  <h3>${item.title}</h3>  <p>${item.address}</p>  <p>${item.phone     }</p>  </li>`;
+         let lettersArray = ["A", "B", "C", "D", "E", "F"];
+         for (let i=0; i<5; i++) {
+         return `<li>  <h3>${lettersArray[key]}.</h3>  <p>${item.address}</p>  <p>${item.phone     }</p>  </li>`;
+         }
        });
        document.getElementById("gasStations").innerHTML = listItems.join("");
        map.appendChild(mapImage)
